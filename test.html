@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css”/>
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <link rel="stylesheet" href="./test.css">
+    <title>Student Management CRUD</title>
+</head>
+<body>
+    <h1>Student Management CRUD</h1>
+    <div>       
+    <form id="form">
+    <input type="text" id="name" class="name col-4" placeholder="Name">
+    <input type="text" id="email" class="email col-4" placeholder="Email">
+    <input type="text" id="gpa" class="gpa col-3" placeholder="GPA"><br>
+    <input type="text" id="age" class="age col-4" placeholder="Age">
+    <input type="text" id="degree" class="degree col-4" placeholder="Degree">
+    <button type="submit" id="submit" class="add col-6" onclick="saveData()">Add Student</button><br>
+    </form>
+    <input type="text" id="search" class="search col-12" placeholder="Search by Name,email or degree">
+    <script src="./test.js"></script>
+    </div>
+    <table id="table" class="table table-dark table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>GPA</th>
+                <th>Degree</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="sid">sid </td>
+                <td id="sname">sname</td>
+                <td id="semail">semail</td>
+                <td id="sgpa">sgpa</td>
+                <td id="sage">sage</td>
+                <td id="sdegree">sdegree
+                    <i onclick="editDetails(this)" class="bi bi-trash"></i>
+                    <i onclick="editDetais(this)" class="bi bi-pencil-square"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
